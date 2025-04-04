@@ -1,0 +1,10 @@
+.DS_Store
+.vscode
+cub3D
+*.sw*
+*.o
+*.a
+compile_flags.txt
+# *.sh
+build
+*.pdf
