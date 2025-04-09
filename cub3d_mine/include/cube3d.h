@@ -13,7 +13,7 @@
 #ifndef CUBE3D_H
 # define CUBE3D_H
 
-# include <mlx/mlx.h>
+# include "../mlx/mlx.h"
 # include "libft/libft.h"
 # include "get_next_line/get_next_line.h"
 
@@ -28,8 +28,15 @@
 # include <sys/time.h> //gettimeofday
 # include <math.h>
 
-# define WIDTH 1280
-# define HEIGHT 1200
+#define WIDTH 1280
+#define HEIGHT 1200
+#define W 119
+#define A 97
+#define S 115
+#define D 100
+#define LEFT 65361
+#define RIGHT 65363
+#define ESC 65307
 
 typedef struct s_info
 {
@@ -76,7 +83,6 @@ typedef struct s_textures
 	char	*west;
 	int		floor[4];
 	int		celing[4];
-	t_info	*info[4];
 }			t_textures;
 
 typedef struct s_game
@@ -92,6 +98,7 @@ typedef struct s_game
 	t_textures	*textures;
 	t_mlx		*mlx;
 	t_player	*player;
+	t_info		info[4];
 }				t_game;
 
 //MAIN
@@ -106,5 +113,9 @@ int		check_textures(t_game *game);
 int		check_map(t_game *game);
 int		rectangular_map(t_game *game);
 int		check_rectangle(t_game *game);
+void	free_structure(t_game *game);
+
+//RENDER
+int	render_map(t_game *game);
 
 #endif

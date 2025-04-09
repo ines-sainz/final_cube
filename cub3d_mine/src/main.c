@@ -47,8 +47,12 @@ void	free_structure(t_game *game)
 		free(game->map);
 		game->map = NULL;
 	}
-	if (game->mlx->mlx)
-		free(game->mlx->mlx);
+	if (game->player)
+	{
+		free(game->player);
+	}
+	if (game->mlx)
+		free(game->mlx);
 }
 
 void	init_structure(t_game *game)
@@ -57,6 +61,7 @@ void	init_structure(t_game *game)
 	game->textures = ft_calloc(1, sizeof(t_textures));
 	game->mlx = ft_calloc(1, sizeof(t_mlx));
 	game->player = ft_calloc(1, sizeof(t_player));
+	//game->info = ft_calloc(4, sizeof(t_info));
 }
 
 int	main(int argc, char **argv)
@@ -90,6 +95,6 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	printf("map_width : %i map_height: %i\n", game.map_width, game.map_height);
-	printf("player_x : %i player_y: %i\n", game.player_x, game.player_y);
+	printf("player_x : %f player_y: %f player_angle: %f\n", game.player_x, game.player_y, game.player->angle);
 	free_structure(&game);
 }

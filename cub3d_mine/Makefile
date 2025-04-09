@@ -45,10 +45,10 @@ r: fclean all
 run: ./cub3D
 
 $(LIBFT):
-	$(MAKE) -s -C $(LIBFT_DIR)
+	$(MAKE) -s -C $(LIBFT_DIR) CFLAGS="$(CFLAGS)"
 
 $(GNL):
-	$(MAKE) -s -C $(GNL_DIR)
+	$(MAKE) -s -C $(GNL_DIR) CFLAGS="$(CFLAGS)"
 
 $(MLX):
 	$(MAKE) -s -C $(MLX_DIR)

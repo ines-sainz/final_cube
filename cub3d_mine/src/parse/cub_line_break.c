@@ -14,7 +14,7 @@
 
 void	free_matrix(char **matrix)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (matrix[i])
@@ -23,7 +23,6 @@ void	free_matrix(char **matrix)
 		i++;
 	}
 	free(matrix);
-	matrix = NULL;
 }
 
 int	is_map(char *line, int *is_map, t_game *game)

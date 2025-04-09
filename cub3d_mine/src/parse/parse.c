@@ -17,8 +17,7 @@ void	set_player_angle(t_game *game)
 	if (game->player_dir == 'N')
 		game->player->angle = 90;
 	if (game->player_dir == 'S')
-		game->player->angle = 
-		;
+		game->player->angle = 270;
 	if (game->player_dir == 'E')
 		game->player->angle = 0;
 	if (game->player_dir == 'W')

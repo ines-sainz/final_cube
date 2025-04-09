@@ -92,7 +92,7 @@ char	*ft_substr_gnl(char const *s, unsigned int start, size_t len)
 
 	if (start > ft_strlen_gnl(s) || s[0] == '\0' || len == 0)
 	{
-		sub_string = malloc(1 * sizeof(char));
+		sub_string = ft_calloc_gnl(1, sizeof(char));
 		if (!sub_string)
 			return (NULL);
 		sub_string[0] = '\0';
@@ -100,7 +100,7 @@ char	*ft_substr_gnl(char const *s, unsigned int start, size_t len)
 	}
 	if (len > (ft_strlen_gnl(s) - start))
 		len = ft_strlen_gnl(s) - start;
-	sub_string = malloc(len + 1 * sizeof(char));
+	sub_string = ft_calloc_gnl(len + 1, sizeof(char));
 	if (!sub_string)
 		return (NULL);
 	i = 0;
