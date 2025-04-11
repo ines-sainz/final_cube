@@ -24,7 +24,11 @@ SRC				=	src/main.c \
 					$(PARSE_DIR)/cub_line_break.c \
 					$(PARSE_DIR)/colors_textures.c \
 					$(PARSE_DIR)/check_map.c \
-					$(RENDERING_DIR)/render_map.c
+					$(RENDERING_DIR)/render_map.c \
+					$(RENDERING_DIR)/hooks.c \
+					$(RENDERING_DIR)/draw_loop.c \
+					$(RENDERING_DIR)/draw_rays.c
+
 
 OBJ				=	$(SRC:.c=.o)
 

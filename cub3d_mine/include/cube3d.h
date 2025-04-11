@@ -30,6 +30,15 @@
 
 #define WIDTH 1280
 #define HEIGHT 1200
+#define PI 3.1415926535897932384626433832
+#define FOV 60
+#define STEP 0.01
+
+#define NORTH 0
+#define SOUTH 1
+#define EAST 2
+#define WEST 3
+
 #define W 119
 #define A 97
 #define S 115
@@ -116,6 +125,13 @@ int		check_rectangle(t_game *game);
 void	free_structure(t_game *game);
 
 //RENDER
-int	render_map(t_game *game);
+int		render_map(t_game *game);
+int		do_destroy_window(t_game *game);
+int		key_release(int key, t_game *game);
+int		key_press(int key, t_game *game);
+int		draw_loop(t_game *game);
+float	deg_to_rad(float angle);
+void	draw_rays(t_game *game);
+void	put_pixel(int x, int y, int color, t_game *game);
 
 #endif
